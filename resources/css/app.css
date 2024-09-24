@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .round-btn {
+        @apply w-8 h-8 overflow-auto rounded-full bg-slate-100 focus:outline-none focus:ring-1 focus:ring-slate-100 focus:ring-offset-2 focus:ring-offset-slate-800;
+    }
+    .nav-link {
+        @apply active:bg-slate-900 hover:bg-slate-100/10 text-slate-100 px-3 py-1 rounded-lg;
+    }
+    .title {
+        @apply my-6 text-center text-3xl font-bold leading-relaxed text-transparent bg-clip-text bg-gradient-to-r from-[#DC5F00] to-white;
+    }
+
+    .btn {
+        @apply relative enabled:bg-[#DC5F00] enabled:active:bg-[#B74900] enabled:hover:bg-[#FF6F00] p-2 rounded-md text-white block w-full disabled:bg-slate-500 disabled:cursor-wait;
+    }
+    .error {
+        @apply text-xs text-red-500 mt-px;
+    }
+    .input {
+        @apply block w-full p-2 rounded-md ring-1 ring-slate-600 focus:ring-[#DC5F00] focus:ring-2 outline-0 border-0 mt-1;
+    }
+    label {
+        @apply text-sm text-white;
+    }
+    .card {
+        @apply dark:bg-[#686D76]/50 p-6 rounded-lg backdrop-blur-sm;
+    }
+
+    .username {
+        @apply py-2 pl-4 border-b border-slate-200 text-xs text-slate-700;
+    }
+}
+
+.bg {
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23373a40' fill-opacity='0.67'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.glass-button {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(5px); /* Apply blur effect for Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border to simulate glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect to enhance the glass look */
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.2); /* Increase background opacity */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly bigger shadow on hover */
+}
